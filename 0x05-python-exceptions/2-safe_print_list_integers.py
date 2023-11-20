@@ -8,5 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 cnt += 1
         print()
         return cnt
-    except(TypeError):
+    except TypeError:
         raise IndexError
