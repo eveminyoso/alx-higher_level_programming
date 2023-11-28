@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, N):
-    # Check if there is a queen in the same column
+    """Check if there is a queen in the same column"""
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
@@ -34,6 +35,7 @@ def nqueens(N):
 
     board = [-1] * N
     solve_nqueens(board, 0, N)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
