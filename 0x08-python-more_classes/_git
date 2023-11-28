@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "Rectangle that defines a rectangle"
+git push
