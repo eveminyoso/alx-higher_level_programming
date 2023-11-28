@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import sys
 
 
@@ -11,6 +12,7 @@ def is_safe(board, row, col, N):
             return False
     return True
 
+
 def solve_nqueens(board, row, N):
     if row == N:
         # All queens are placed, print the solution
@@ -21,6 +23,7 @@ def solve_nqueens(board, row, N):
         if is_safe(board, row, col, N):
             board[row] = col
             solve_nqueens(board, row + 1, N)
+
 
 def nqueens(N):
     if not N.isdigit():
