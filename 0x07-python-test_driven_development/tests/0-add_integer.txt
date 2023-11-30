@@ -20,3 +20,7 @@ TypeError: b must be an integer
 Traceback (most recent call last):
   ...
 TypeError: a must be an integer
+>>> add_integer(1.0e308, 1.0e308)
+Traceback (most recent call last):
+  ...
+OverflowError: Float overflow: result is infinity
