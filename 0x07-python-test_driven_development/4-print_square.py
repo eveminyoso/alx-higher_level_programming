@@ -28,6 +28,6 @@ def print_square(size):
         print("#" * size)
 
 
-        if __name__ == "__main__":
-            import doctest
-            doctest.testmod("./tests/4-print_square.txt")
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod("./tests/4-print_square.txt")
