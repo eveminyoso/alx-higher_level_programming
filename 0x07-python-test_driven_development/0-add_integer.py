@@ -7,17 +7,17 @@ Module for an addition function
 
 
 def add_integer(a, b=98):
-        """
-            Returns a + b
-        """
-        if not isinstance(a, (int, float)):
-            raise TypeError("a must be an integer")
-        if not isinstance(b, (int, float)):
-            raise TypeError("b must be an integer")
-        result = a + b
-        if result == float('inf'):
-            raise OverflowError("Float overflow: result is infinity")
-        return int(a) + int(b)
+    """
+    Returns a + b
+    """
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+    result = a + b
+    if result == float('inf'):
+        raise OverflowError("Float overflow: result is infinity")
+    return int(a) + int(b)
 
 
 if __name__ == "__main__":
