@@ -12,6 +12,7 @@ Module for printing a square
 def print_square(size):
     """
     Prints a square of size
+
     Parameters:
     size(int) - length of the square
 
