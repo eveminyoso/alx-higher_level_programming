@@ -14,9 +14,10 @@ def add_integer(a, b=98):
             raise TypeError("a must be an integer")
         if not isinstance(b, (int, float)):
             raise TypeError("b must be an integer")
-        a = int(a)
-        b = int(b)
-        return a + b
+        result = a + b
+        if result == float('inf'):
+            raise OverflowError("Float overflow: result is infinity")
+        return int(a) + int(b)
 
 
 if __name__ == "__main__":
