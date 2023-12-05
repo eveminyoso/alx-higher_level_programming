@@ -13,9 +13,9 @@ if len_ >= 2:
     for i in range(1, len_):
         new.append(sys.argv[i])
 
-
+#save_to_json_file(new, filename)
 existing_data = load_from_json_file(filename)
-
+#save_to_json_file(new, filename)
 # Add the command-line arguments to the list
 new_data = existing_data + new
 
