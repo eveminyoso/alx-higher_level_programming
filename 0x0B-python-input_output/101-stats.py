@@ -24,7 +24,7 @@ try:
         if len(parts) == 7:
             file_size = int(parts[-1])
             status_code = int(parts[-2])
-            
+
             total_file_size += file_size
             status_code_counts[status_code] += 1
             line_count += 1
