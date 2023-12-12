@@ -136,5 +136,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns that :)"""
-        x = f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        x = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height
+                )
         return x
