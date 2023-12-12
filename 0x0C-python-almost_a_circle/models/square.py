@@ -27,22 +27,14 @@ class Square(Rectangle):
         """
         arguments' assignment to our parameters
         """
-        if args is not None:
-            if len(args) > 0:
-                self.id = args[0]
-            if len(args) > 1:
-                self.size = args[1]
-            if len(args) > 2:
-                self.x = args[2]
-            if len(args) > 3:
-                self.y = args[3]
+        if args:
+            attrs = ['id', 'size', 'x', 'y']
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
 
         if kwargs:
-            # size will be provided instead of width
-            if 'size' in kwargs:
-                self.size = kwargs['size']
-            if 'id' in kwargs:
-                self.id = kwargs['id']
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """

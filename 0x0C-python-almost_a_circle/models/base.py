@@ -59,7 +59,7 @@ class Base:
         Converts jsonified object to normal object
         """
         if json_string is None:
-            return "[]"
+            return list()
         x = []
         x = json.loads(json_string)
         return x

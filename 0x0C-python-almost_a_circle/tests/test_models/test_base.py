@@ -113,7 +113,7 @@ class TestBase(unittest.TestCase):
 
     def test_from_json_string_with_none(self):
         result = Base.from_json_string(None)
-        self.assertEqual(result, '[]')
+        self.assertEqual(result, [])
 
     def test_from_json_string_with_single_object(self):
         result = Base.from_json_string('[{ "id": 89 }]')
@@ -503,6 +503,15 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(result[0].size, 2)
         self.assertEqual(result[0].x, 4)
         self.assertEqual(result[0].y, 0)
+
+    def test_update_with_args(self):
+        square = Square(3, 1, 2, 42)
+        square.update(id=89, size=8, x=3)
+
+        self.assertEqual(square.id, 89)
+        self.assertEqual(square.size, 8)
+        self.assertEqual(square.x, 3)
+        self.assertEqual(square.y, 2)
 
     def test_to_dictionary(self):
         square = Square(3, 1, 2, 42)
