@@ -4,3 +4,4 @@ if (first) {
 	  console.log(first);
 } else {
 	  console.log('No argument');
+}
