@@ -31,13 +31,13 @@ def list_with_args(user, pwd, db, state):
     if result:
         for i in result:
             print(i)
-        db.close()
+    db.close()
 
-    if __name__ == '__main__':
-        if len(sys.argv) != 5:
-            print("Usage: exec.py <user> <passwd> <db> <state>")
-            sys.exit(1)
-            user = sys.argv[1]
-            pwd, db, state = sys.argv[2], sys.argv[3], sys.argv[4]
+if __name__ == '__main__':
+    if len(sys.argv) != 5:
+        print("Usage: exec.py <user> <passwd> <db> <state>")
+        sys.exit(1)
+    user = sys.argv[1]
+    pwd, db, state = sys.argv[2], sys.argv[3], sys.argv[4]
 
-            list_with_args(user, pwd, db, state)
+    list_with_args(user, pwd, db, state)
