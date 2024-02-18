@@ -33,6 +33,7 @@ def list_with_args(user, pwd, db, state):
             print(i)
     db.close()
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 5:
         print("Usage: exec.py <user> <passwd> <db> <state>")
