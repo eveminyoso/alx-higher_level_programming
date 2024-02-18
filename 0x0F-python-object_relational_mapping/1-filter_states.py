@@ -23,6 +23,8 @@ def list_states_with_n(username, password, database):
 
     except Exception as e:
         print("error")
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>")
