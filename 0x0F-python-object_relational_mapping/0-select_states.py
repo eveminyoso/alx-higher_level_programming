@@ -18,14 +18,12 @@ def list_states(username, password, database):
     for i in result:
         print(i)
 
-        db.close()
+    db.close()
 
 
-
-        if _name_ == '_main_':
-            # Check if all arguments are provided
-            if len(sys.argv) != 4:
-                print("Usage: python_script file <username> <passwd> <database>")
-                sys.exit(1)
-                username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
-                list_states(username, password, database)
+if __name__ == '__main__':
+    if len(sys.argv) != 4:
+        print("Usage: python_script file <username> <passwd> <database>")
+        sys.exit(1)
+    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    list_states(username, password, database)
