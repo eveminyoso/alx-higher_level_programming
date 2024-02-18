@@ -13,20 +13,21 @@ def list_states_with_n(username, password, database):
                 db=database)
         cursor = db.cursor()
         cursor.execute(
-                "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
+                "SELECT * FROM states "
+                "WHERE name LIKE 'N%' ORDER BY states.id ASC")
 
         results = cursor.fetchall()
         for row in results:
             print(row)
-            db.close()
+        db.close()
 
     except Exception as e:
-        print("Error:", e)
-    if __name__ == "__main__":
-        if len(sys.argv) != 4:
-            print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-            sys.exit(1)
+        print("error")
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <database>")
+        sys.exit(1)
 
-            username, password, database = sys.argv[1:]
+    user, pwd, db = sys.argv[1], sys.argv[2], sys.argv[3]
 
-            list_states_with_n(username, password, database)
+    list_states_with_n(user, pwd, db)
