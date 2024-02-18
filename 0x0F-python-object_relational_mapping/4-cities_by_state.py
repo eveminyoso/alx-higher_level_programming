@@ -34,10 +34,10 @@ def list_cities(user, pwd, db):
         print(i)
 
 
-        if __name__ == '__main__':
-            # parsing arguments
-            if len(sys.argv) != 4:
-                print("Usage: executable.py <user> <passwd> <db>")
-                sys.exit(1)
-                user, pwd, db = sys.argv[1], sys.argv[2], sys.argv[3]
-                list_cities(user, pwd, db)
+if __name__ == '__main__':
+    # parsing arguments
+    if len(sys.argv) != 4:
+        print("Usage: executable.py <user> <passwd> <db>")
+        sys.exit(1)
+    user, pwd, db = sys.argv[1], sys.argv[2], sys.argv[3]
+    list_cities(user, pwd, db)
