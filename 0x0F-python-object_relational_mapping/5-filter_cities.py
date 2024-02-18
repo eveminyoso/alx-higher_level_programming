@@ -34,13 +34,13 @@ def from_state_list(user, pwd, db, state):
     else:
         print()
 
-        db.close()
+    db.close()
 
 
-        if __name__ == '__main__':
-            # Parse in the arguments
-            if len(sys.argv) != 5:
-                print("Usage: executable.py <user> <passwd> <db> <state>")
-                sys.exit(1)
-                user, pwd, db, state = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
-                from_state_list(user, pwd, db, state)
+if __name__ == '__main__':
+    # Parse in the arguments
+    if len(sys.argv) != 5:
+        print("Usage: executable.py <user> <passwd> <db> <state>")
+        sys.exit(1)
+    user, pwd, db, state = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    from_state_list(user, pwd, db, state)
