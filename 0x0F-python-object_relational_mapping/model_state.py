@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-SQLAlchemy mapping
+Model definition
 """
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
@@ -14,7 +14,7 @@ from sqlalchemy.orm import relationship
 Base = declarative_base()
 
 
-class State:
+class State(Base):
     """
     my model definition
     """
@@ -23,5 +23,4 @@ class State:
     name = Column(String(128), nullable=False)
 
 
-    cities = relationship("City", back_populates="state")
-
+cities = relationship("City", back_populates="state")

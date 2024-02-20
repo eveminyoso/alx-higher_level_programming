@@ -1,2 +1,2 @@
 -- RECREATING DATABASE
-DROP DATABASE hbtn_0e_0_usa;
+DROP DATABASE hbtn_0e_6_usa;
