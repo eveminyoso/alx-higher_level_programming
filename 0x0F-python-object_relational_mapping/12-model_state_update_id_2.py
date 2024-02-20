@@ -5,7 +5,7 @@ updating record
 import sys
 import sqlalchemy
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessinmaker
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
